@@ -23,6 +23,7 @@ const FeedbackForm = () => {
       Name: ${formData.name}
       Email: ${formData.email}
       Feedback: ${formData.feedback}
+      Rating: ${formData.rating}
     `;
     const isConfirmed = window.confirm(`Please confirm your details:\n\n${confirmationMessage}`);
     if (isConfirmed) {
@@ -30,7 +31,8 @@ const FeedbackForm = () => {
       setFormData({
         name: '',
         email: '',
-        feedback: ''
+        feedback: '',
+        rating: ''
       });
       alert('Thank you for your valuable feedback!');
     }
@@ -64,6 +66,21 @@ const FeedbackForm = () => {
           value={formData.feedback}
           onChange={handleChange}
         ></textarea>
+        <div className="rating-group">
+          <p>Rate your experience (1-5):</p>
+          {[1, 2, 3, 4, 5].map((value) => (
+            <label key={value}>
+              <input
+                type="radio"
+                name="rating"
+                value={value}
+                checked={formData.rating === value.toString()}
+                onChange={handleChange}
+              />
+              {value}
+            </label>
+          ))}
+        </div>
         <button type="submit">Submit Feedback</button>
         
       </form>
