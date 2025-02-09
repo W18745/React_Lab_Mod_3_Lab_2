@@ -5,7 +5,8 @@ const FeedbackForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    feedback: ''
+    feedback: '',
+    rating: ''
   });
 
   const handleChange = (event) => {
