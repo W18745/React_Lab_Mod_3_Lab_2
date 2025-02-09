@@ -55,7 +55,20 @@ nav{
   .feedback-form button:hover {
     background-color: #d94a77;
   }
-  
+
+  .rating-group {
+    margin-bottom: 20px;
+  }
+
+  .rating-option {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .rating-option input[type="radio"] {
+    margin-right: 10px;
+  }
+
   /* Media query for smaller screens */
   @media only screen and (max-width: 600px) {
     .feedback-form {

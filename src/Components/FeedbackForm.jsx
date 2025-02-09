@@ -69,7 +69,7 @@ const FeedbackForm = () => {
         <div className="rating-group">
           <p>Rate your experience (1-5):</p>
           {[1, 2, 3, 4, 5].map((value) => (
-            <label key={value}>
+            <label key={value} className="rating-option">
               <input
                 type="radio"
                 name="rating"
