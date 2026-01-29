@@ -18,7 +18,7 @@ const FeedbackForm = () => {
     };
 
     const handleSubmit = (event) => {
-        event.PreventDefault();
+        event.preventDefault();
 
         const confirmationMessage = `
             Name: ${formData.name}
